@@ -1,4 +1,4 @@
-19/02/2004
+19/02/2024
 Buenas tardes Luis, Espero que haya tenido un buen fin de semana y se encuentre muy bien, Primero antes de todo quiero perdile mil disculpas por la demora 
 a la hora de entregar las correciones dadas; Pero ademas de estar realizando la carrera de Front end por CoderHouse; por el metedo tradicional, estoy formandome a nivel terciario
 en la carrera Analista de Sistemas, por ende la semana anterior y esta estoy estudiando a full para presentarme en 3 finales.
