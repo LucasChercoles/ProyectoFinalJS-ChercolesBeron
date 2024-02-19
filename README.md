@@ -7,12 +7,22 @@ Con esto no quiero justificar mi demora pero esta bueno que lo sepa.
 Ahora si volviendo a las correciones que usted me dijo que arreglara; correji los primero 2 puntos.
 
 1er Punto:
+
+
 ![image](https://github.com/LucasChercoles/TercerPreentrega-ChercolesBeron/assets/149127291/bad64b59-f999-4d1a-bcd5-022453087a4c)
+
+
 En la linea 58 del archivo store.js reemplaze las alerts y/o prompts por la librería Sweet Alert 2 que usted mismo me recomendo que utilizara.
 
 2do Punto:
+
+
 ![image](https://github.com/LucasChercoles/TercerPreentrega-ChercolesBeron/assets/149127291/d00d9e54-43f6-4898-884a-6ae202a40579)
+
+
 ![image](https://github.com/LucasChercoles/TercerPreentrega-ChercolesBeron/assets/149127291/06b1fe25-5253-4cd7-aeff-37a5cc126ebe)
+
+
 En la linea 81,82 y 113 agregue el metodo método .toFixed() y coloque en el paréntesis el número 2 para que solo muestre hasta dos decimales como usted me lo recomendo para que
 en el body y footer del carrito este no se ven todos los numero decimales.
 
