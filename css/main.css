@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+
+
+#store{
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 30%;
+    height: auto;
+    background-color: whitesmoke;
+    z-index: 1001;
+}
+
+
+.products{
+    display: inline-block;
+    position: relative;
+    margin: 30px;
+
+}
+
+.card {
+    display: block;
+    position: relative;
+    width: 500px; 
+}
+
+#image {
+    height: 200px; 
+    width: 200px; 
+}
+
+#pic {
+    margin-top: 15px;
+    height: 150px; 
+    width: 150px; 
+    object-fit: cover; 
+}
