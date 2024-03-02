@@ -35,6 +35,7 @@ export const products = [
         image:"https://diamondsystemar.vtexassets.com/arquivos/ids/156716-500-auto?v=638024361048400000&width=500&height=auto&aspect=true",
         categories:"Peripherals"
     },
+    
     {
         id: 6,
         name: "External-disk",
@@ -42,48 +43,48 @@ export const products = [
         image:"https://diamondsystemar.vtexassets.com/arquivos/ids/155646-500-auto?v=638013503708370000&width=500&height=auto&aspect=true",
         categories:"Storage"
     },
-    {
-        id: 7,
-        name: "Pendrive",
-        price: 8.455,
-        image:"https://diamondsystemar.vtexassets.com/arquivos/ids/158451-500-auto?v=638162298427970000&width=500&height=auto&aspect=true",
-        categories:"Storage"
-    },
-    {
-        id: 8,
-        name: "MicroSD",
-        price: 5.699,
-        image:"https://diamondsystemar.vtexassets.com/arquivos/ids/155755-500-auto?v=638013504239700000&width=500&height=auto&aspect=true",
-        categories:"Storage"
-    },
-    {
-        id: 9,
-        name: "Mouse",
-        price: 77.499,
-        image:"https://diamondsystemar.vtexassets.com/arquivos/ids/158498-500-auto?v=638162331481700000&width=500&height=auto&aspect=true",
-        categories:"Peripherals"
-    },
-    {
-        id: 10,
-        name: "Headphone",
-        price: 62.999,
-        image:"https://diamondsystemar.vtexassets.com/arquivos/ids/159643-500-auto?v=638308345088800000&width=500&height=auto&aspect=true",
-        categories:"Peripherals"
-    },
-    {
-        id: 11,
-        name: "Monitor",
-        price: 199.999,
-        image:"https://diamondsystemar.vtexassets.com/arquivos/ids/159533-500-auto?v=638294411178070000&width=500&height=auto&aspect=true",
-        categories:"Peripherals"
-    },
-    {
-        id: 12,
-        name: "Monitor",
-        price: 199.999,
-        image:"https://diamondsystemar.vtexassets.com/arquivos/ids/159533-500-auto?v=638294411178070000&width=500&height=auto&aspect=true",
-        categories:"Peripherals"
-    }    
+    // {
+    //     id: 7,
+    //     name: "Pendrive",
+    //     price: 8.455,
+    //     image:"https://diamondsystemar.vtexassets.com/arquivos/ids/158451-500-auto?v=638162298427970000&width=500&height=auto&aspect=true",
+    //     categories:"Storage"
+    // },
+    // {
+    //     id: 8,
+    //     name: "MicroSD",
+    //     price: 5.699,
+    //     image:"https://diamondsystemar.vtexassets.com/arquivos/ids/155755-500-auto?v=638013504239700000&width=500&height=auto&aspect=true",
+    //     categories:"Storage"
+    // },
+    // {
+    //     id: 9,
+    //     name: "Mouse",
+    //     price: 77.499,
+    //     image:"https://diamondsystemar.vtexassets.com/arquivos/ids/158498-500-auto?v=638162331481700000&width=500&height=auto&aspect=true",
+    //     categories:"Peripherals"
+    // },
+    // {
+    //     id: 10,
+    //     name: "Headphone",
+    //     price: 62.999,
+    //     image:"https://diamondsystemar.vtexassets.com/arquivos/ids/159643-500-auto?v=638308345088800000&width=500&height=auto&aspect=true",
+    //     categories:"Peripherals"
+    // },
+    // {
+    //     id: 11,
+    //     name: "Monitor",
+    //     price: 199.999,
+    //     image:"https://diamondsystemar.vtexassets.com/arquivos/ids/159533-500-auto?v=638294411178070000&width=500&height=auto&aspect=true",
+    //     categories:"Peripherals"
+    // },
+    // {
+    //     id: 12,
+    //     name: "Monitor",
+    //     price: 199.999,
+    //     image:"https://diamondsystemar.vtexassets.com/arquivos/ids/159533-500-auto?v=638294411178070000&width=500&height=auto&aspect=true",
+    //     categories:"Peripherals"
+    // }    
 ];
     
     

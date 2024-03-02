@@ -1,68 +1,63 @@
 
-import { productsInStock } from "./main.js"
 
+// Importa datos y funciones desde el archivo main.js
+import { dataToExport, productsInStock } from "./main.js"
+
+// Verifica si no hay datos en sessionStorage y los inicializa como un array vacío
 JSON.parse(sessionStorage.getItem("store")) === null && sessionStorage.setItem("store",JSON.stringify([]))
 
+// Ejecuta el código cuando el contenido del DOM ha sido cargado
 document.addEventListener("DOMContentLoaded", () => {
     drawStore()
 })
 
+// Obtiene los datos de la tienda desde sessionStorage
 let store = JSON.parse(sessionStorage.getItem("store"))
 
+// Obtiene referencias a elementos del DOM
 const listStore = document.getElementById("items") 
 const footStore = document.getElementById("totals")
 const btnStore = document.getElementById("btnStore")
 
 const storeTable = document.getElementById("store")
 
+const mainContent = document.getElementById("main-content");
+
+//Evento click en el botón de la tienda
+
 btnStore.addEventListener("click", () => {
+    document.body.classList.toggle("blur-background");
     drawStore()
-    if (storeTable.style.display === "block"){
-        storeTable.style.display = "none"
-    }else{
-        storeTable.style.display = "block"
-        drawStore()
-    }
+    storeTable.style.display = storeTable.style.display === "block" ? "none" : "block";
 })
 
+// Función para agregar un producto al carrito
 export const buyProduct = (idProduct) => {
+    let product = productsInStock.find(product => product.id === idProduct) || dataToExport.find(product => product.id === idProduct);
+
+    const { name, price, image, id} = product;
+    const productStore = store.find(product => product.id === idProduct);
     
-
-    const product = productsInStock.find((product) => product.id === idProduct)
-
-    const { name, price, image, id} = product
-
-    const productStore = store.find((product) => product.id === idProduct)
-
-    if(productStore === undefined){
-        const newProductStore = {
-            id: id,
-            name: name,
-            price: price,
-            image: image,
-            units: 1
-        }
-    store.push(newProductStore)
-    
-    sessionStorage.setItem("store", JSON.stringify(store))
-    }else{
-        const indexProductStore = store.findIndex((product) => product.id === idProduct)
-
-        store[indexProductStore].units++
-        store[indexProductStore].price = price * store[indexProductStore].units
-
-        sessionStorage.setItem("store", JSON.stringify(store))
+    if (productStore === undefined) {
+        const newProductStore = { id, name, price, image, units: 1 };
+        store.push(newProductStore);
+    } else {
+        const indexProductStore = store.findIndex(product => product.id === idProduct);
+        store[indexProductStore].units++;
+        store[indexProductStore].price = price * store[indexProductStore].units;
     }
-    store = JSON.parse(sessionStorage.getItem("store"))
+    
+    sessionStorage.setItem("store", JSON.stringify(store));
 
     Swal.fire({
         icon: 'success',
         title: 'Added to Cart',
         text: `${name} was added to cart`,
     });
-
 }
 
+
+// Función para dibujar el contenido de la tienda
 const drawStore = () => {
     listStore.innerHTML = ''
 
@@ -81,8 +76,8 @@ const drawStore = () => {
         <td>$${(price /units).toFixed(2)}</td>
         <td>$${price.toFixed(2)}</td>
         <td>
-        <button id="+${id}" class="btn btn-success">+</button>
-        <button id="-${id}" class="btn btn-danger">-</button>
+        <button id="+${id}" class="btnAdd">+</button>
+        <button id="-${id}" class="btnRest">-</button>
         </td>
         `
         listStore.append(body)
@@ -98,6 +93,7 @@ const drawStore = () => {
     
 }
 
+// Función para dibujar el footer de la tabla de la tienda
 const drawFooter = () => {
 
     if(store.length > 0){
@@ -119,6 +115,8 @@ const drawFooter = () => {
 
 }
 
+
+// Función para generar los totales de la compra
 const generateTotals = () => {
     const totalCost = store.reduce((total, { price} ) => total + price, 0)
     // const totalQuantity = store.reduce((total, {Quantity} ) => total + Quantity, 0)
@@ -129,6 +127,7 @@ const generateTotals = () => {
     }
 }
 
+// Función para incrementar la cantidad de un producto en el carrito
 const increaseQuantity = (id) => {
 
     const indexProductStore = store.findIndex((product) => product.id === id)
@@ -142,7 +141,7 @@ const increaseQuantity = (id) => {
     drawStore()
 }
 
-
+// Función para decrementar la cantidad de un producto en el carrito
 const removeQuantity = (id) => {
     const indexProductStore = store.findIndex((product) => product.id === id)
     const price = store[indexProductStore].price / store[indexProductStore].units
